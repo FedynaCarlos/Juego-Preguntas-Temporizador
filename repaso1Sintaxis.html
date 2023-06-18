@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <title>sintaxis</title>
+</head> 
+<body>
+ <input type="number" id="inicioAlarma">
+<button onclick="tiempoAlarma()">Alarma</button>
+<h1 id="tiempoCumplido" style="color: red">APAGADO</h1>
+
+<script>
+let elementoTextoAlarma = document.getElementById("inicioAlarma");
+let elementoSegundos = document.getElementById("tiempoCumplido");
+
+function tiempoAlarma(){
+    setTimeout(tiempoCumplido, 1000 * elementoTextoAlarma.value)
+}
+function tiempoCumplido(){
+    elementoSegundos.textContent = "ENCENDIDO";
+    elementoSegundos.style.color = "green";
+}
+
+
+</script>
+</body>
+
+
+
+</html>
